@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 200px 2fr 1fr;
+}
+
+.modal-window {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form > label {
+  text-align: center;
+}
+
+.modal-window > form > select,
+#startGame {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+#startGame {
+  cursor: pointer;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  color: black;
+  font-size: 40px;
+  border: 1px solid black;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.game-board {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(3, auto);
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.cell:nth-child(3n) {
+  border-right: none;
+}
+.cell:nth-child(n + 1) {
+  border-bottom: none;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.winnerDisplay {
+  margin-bottom: 20px;
+  color: black;
+  font-size: 30px;
+  text-align: center;
+}
+
+.result > button {
+  padding: 5px 20px;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
